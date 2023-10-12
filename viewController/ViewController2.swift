@@ -12,7 +12,7 @@ class ViewController2: UIViewController {
     var name: String!
     
     //creating a var to get access to first view controller
-    var delegate: ViewController!
+    var delegate: ViewControllerDelagate!
     
     @IBOutlet weak var textFieldOutlet: UITextField!
     
@@ -36,7 +36,7 @@ print(name)
     
     @IBAction func changesName(_ sender: UIButton) {
         var name2 = textFieldOutlet.text!
-        delegate.pony = name2
+        delegate.changeName(name2)
     }
     
     /*

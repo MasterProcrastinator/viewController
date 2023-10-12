@@ -5,9 +5,15 @@
 //  Created by ALVIN CHEN on 9/28/23.
 //
 
+protocol ViewControllerDelagate{
+    func changeName(_ s1: String)
+}
+//protocols are like interfaces
+//protocols have blank functions, when adopted you must write the functions code
 import UIKit
+// add a , to add protocols
+class ViewController: UIViewController, ViewControllerDelagate {
 
-class ViewController: UIViewController {
 
     @IBOutlet weak var textFieldOutlet: UITextField!
     
@@ -40,6 +46,13 @@ class ViewController: UIViewController {
             
         
     }
+    
+    
+    func changeName(_ s1: String) {
+        pony = s1
+    }
+    
+    
     
 }
 
